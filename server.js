@@ -8,6 +8,10 @@ app.use(express.json());
 import dotenv from "dotenv";
 dotenv.config({path:"./config/config.env"});
 
+// import morgan
+import morgan from "morgan";
+app.use(morgan("dev"))
+
 
 
 // get requist
