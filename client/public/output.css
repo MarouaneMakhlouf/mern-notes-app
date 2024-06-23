@@ -554,3 +554,24 @@ video {
   --tw-contain-style:  ;
 }
 
+.m-0 {
+  margin: 0px;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.bg-purple-950 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 7 100 / var(--tw-bg-opacity));
+}
+
+.p-0 {
+  padding: 0px;
+}
+
