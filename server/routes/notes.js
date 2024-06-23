@@ -8,6 +8,9 @@ import {
 } from "../controlers/notes.js";
 const router = express.Router();
 
+import { requireAth } from "../middlewares/requireAuth.js";
+router.use(requireAth);
+
 // GET request to fetch all notes and POST request to create a new note
 router.route("/").get(getNotes).post(createNote);
 

@@ -11,14 +11,16 @@ dotenv.config({path:"./config/config.env"});
 import morgan from "morgan";
 app.use(morgan("dev"));
 
-// import router
-import notes from './routes/notes.js';
-
 // import connect Db
 import { connectDb } from './config/db.js';
 
+// import router
+import notes from './routes/notes.js';
+import users from './routes/users.js';
+
 // routes
 app.use("/api/v1/notes", notes);
+app.use("/api/v1/users", users);
 
 // start the server
 app.listen(3001, async () => {
