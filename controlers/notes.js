@@ -16,6 +16,14 @@ export const getNotes = async (req, res) => {
 }
 export const getSingleNote = async (req, res) => {
     try {
+
+        if (!req.params.id.match(/^[0-0a-fA-F](24)$/)){
+            return res.status(400).json({
+                success: false,
+                error: "Invalid note id",
+            });
+        }
+
         const note = await Note.findById(req.params.id);
         if(!Note) {
             return res.status(400).json({
